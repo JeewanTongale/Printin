@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shop</title>
+  <link rel="stylesheet" href="css/sstyle.css">
+  <link href="https://fonts.googleapis.com/css?family=Manjari&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Dosis&display=swap" rel="stylesheet">
+
+
+
+</head>
+<body>
+
+	
+
+	<div id="au">
+		<br>
+		<h2>Printin</h2>
+
+	</div>
+
+	<div id="pr">
+
+		<h2>Print From Anywhare</h2>
+
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+	<center>
+	<div id="name">
+		
+
+
+
+
+<div class="form-structor">
+	<div class="signup">
+		<h2 class="form-title" id="signup"><span>or</span>Sign up</h2>
+		<div class="form-holder">
+			<input type="text" class="input" placeholder="Name of the shop" />
+			<input type="Number" class="input" placeholder="Contact Number" />
+			<input type="text" class="input" placeholder="GST Number" />	
+			<input type="email" class="input" placeholder="Email" />
+			<input type="password" class="input" placeholder="Password" />
+		</div>
+		<button class="submit-btn">Sign up</button>
+	</div>
+	
+</div>
+
+
+
+
+
+
+
+
+
+
+	</div>
+    </center>
+
+
+
+
+
+
+
+
+    <script type="text/javascript">
+    	console.clear();
+
+const loginBtn = document.getElementById('login');
+const signupBtn = document.getElementById('signup');
+
+loginBtn.addEventListener('click', (e) => {
+	let parent = e.target.parentNode.parentNode;
+	Array.from(e.target.parentNode.parentNode.classList).find((element) => {
+		if(element !== "slide-up") {
+			parent.classList.add('slide-up')
+		}else{
+			signupBtn.parentNode.classList.add('slide-up')
+			parent.classList.remove('slide-up')
+		}
+	});
+});
+
+signupBtn.addEventListener('click', (e) => {
+	let parent = e.target.parentNode;
+	Array.from(e.target.parentNode.classList).find((element) => {
+		if(element !== "slide-up") {
+			parent.classList.add('slide-up')
+		}else{
+			loginBtn.parentNode.parentNode.classList.add('slide-up')
+			parent.classList.remove('slide-up')
+		}
+	});
+});
+    </script>
+
+</body>
+</html>
